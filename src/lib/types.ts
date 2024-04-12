@@ -2,31 +2,17 @@ import { CATEGORIES } from './data';
 
 export type category = (typeof CATEGORIES)[number]['type'];
 
-export type post = {
-  Id: number;
-  userId: number;
-  title: string;
-  deadline: string;
-  status: 'in_progress' | 'completed' | 'failed';
-  category: category;
-  place: string;
-  pLocationX: number;
-  pLocationY: number;
-  content: string;
-  products: product[];
-  discountRate?: number;
-  participants?: number;
-  createAt: string;
-  updateAt: string;
-};
 
-export type product = {
-  productId: number;
-  productName: string;
+export type postPreview = {
+  id: number;
+  title: string;
+  content: string;
+  category: category;
+  product_name: string[];
   price: number;
-  count: number;
-  purchaseLink: string;
-  productImgUrl: string;
+  original_price: number;
+  participants: number;
+  recruit_status: 'RECRUITING' | 'RECRUITED';
 };
 
 // 카카오 지도 place 타입
