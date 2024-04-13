@@ -7,6 +7,7 @@ import CategoryPage from './pages/CategoryPage';
 import PostListPage from './pages/PostListPage';
 import PostNewPage from './pages/PostNewPage';
 import PostDetailPage from './pages/PostDetailPage';
+import SearchResultPage from './pages/SearchResultPage';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
               <Route path="/category" element={<CategoryPage />} />
               <Route path="/posts/:selectedCategory" element={<PostListPage />} />
               <Route path="/post/:postId" element={<PostDetailPage />} />
+              <Route path="/search/:searchKeyword" element={<SearchResultPage />} />
             </Route>
           </Routes>
         </Router>
