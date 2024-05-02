@@ -1,10 +1,11 @@
 import { loginHandler, socialLoginHandler } from './auth/login';
 import { signoutHandler } from './auth/signout';
-import { verifyEmailHandler } from './auth/signup';
-// import { signupHandler } from './auth/signup';
+import { signUpHandler, verifyEmailHandler } from './auth/signup';
+
 import { verifyCodeHandler } from './auth/verifyCode';
 import { deleteBookmarkHandler, getBookmarksHandler, postBookmarkHandler } from './myPage/bookmark';
 import { getHistoryHandler } from './myPage/history';
+import { deleteKeywordHandler, getKeywordsHandler, postKeywordHandler, updateKeywordHandler } from './myPage/keyword';
 import { postMannersHandler } from './myPage/manners';
 import { getMyPostsHandler } from './myPage/myPosts';
 import {
@@ -35,7 +36,7 @@ import { valuationHandler } from './post/valuations';
 export const handlers = [
   verifyEmailHandler,
   verifyCodeHandler,
-  // signupHandler,
+  signUpHandler,
   signoutHandler,
   loginHandler,
   socialLoginHandler,
@@ -64,4 +65,8 @@ export const handlers = [
   deleteNotificationHandler,
   putPostEditHandler,
   getMapPostsHandler,
+  getKeywordsHandler,
+  postKeywordHandler,
+  deleteKeywordHandler,
+  updateKeywordHandler,
 ];
