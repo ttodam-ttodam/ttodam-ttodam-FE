@@ -11,7 +11,9 @@ export default function ProfilePage() {
 
   const { data, error, isLoading } = useQuery<Profile[]>({
     queryKey: ['profiles'],
-    queryFn: getProfiles,
+    queryFn: () => {
+      return getProfiles();
+    },
   });
 
   if (isLoading) return <div>프로필 정보를 가져오는 중입니다.</div>;
