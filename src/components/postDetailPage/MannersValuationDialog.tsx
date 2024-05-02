@@ -33,7 +33,6 @@ export default function MannersValuationDialog({ requestList }: MannersValuation
     if (valuations.length == membersToValuate.length) setAllValuated(true);
   }, [valuations]);
 
-
   const membersToValuate = requestList.filter(member => member.requestStatus === 'ACCEPT');
   // const membersToValuate = requestList;
   const handleValuationChange = (memberId: number, count: number) => {
